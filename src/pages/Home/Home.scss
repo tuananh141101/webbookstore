@@ -1,0 +1,1288 @@
+@import "../../assets/styles/common";
+
+.product-categories {
+  .container {
+    .row:first-child {
+      padding-top: 68px;
+      padding-bottom: 16px;
+
+      .col_1 > span {
+        font-size: 24px;
+        color: $Color-1;
+        font-family: "Victormono";
+        font-weight: bold;
+      }
+
+      .col_2 > span {
+        font-size: $fontSize-Medium;
+        color: $Color-1;
+        text-decoration: underline;
+
+        .icon {
+          stroke: $Color-1;
+          fill: $Color-1;
+        }
+      }
+
+      @media screen and (max-width: $breakpointSmall) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .col_1 {
+          width: 100%;
+        }
+
+        .col_2 {
+          width: 100%;
+          justify-content: start !important;
+        }
+      }
+    }
+
+    .row:last-child {
+      padding-bottom: 68px;
+
+      .custom_col_cate {
+        font-size: 28px;
+
+        .ul_cate {
+          padding-left: 0;
+          gap: 20px;
+
+          @media screen and (max-width: $breakpointLarge) {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          li {
+            width: 199.88px;
+            height: 164.2px;
+
+            @media screen and (max-width: 440px) {
+              width: 100%;
+            }
+
+            .product-cate__inner {
+              border: 2px solid $Color-2;
+              border-radius: 3px;
+              width: 100%;
+              height: 100%;
+              padding-left: 20px;
+            }
+
+            .product-cate__icon {
+              background-image: url("https://cdn-icons-png.flaticon.com/128/5381/5381349.png");
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 48px;
+              height: 48px;
+            }
+
+            .product-cate__text {
+              p {
+                font-size: $fontSize-Large;
+              }
+
+              span {
+                font-size: $fontSize-Light;
+              }
+
+              p,
+              span {
+                color: $Color-2;
+              }
+            }
+
+            &:nth-child(2) {
+              .product-cate__icon {
+                background-image: url("https://cdn-icons-png.flaticon.com/128/1800/1800109.png");
+              }
+            }
+
+            &:nth-child(3) {
+              .product-cate__icon {
+                background-image: url("https://cdn-icons-png.flaticon.com/128/4114/4114695.png");
+              }
+            }
+
+            &:nth-child(4) {
+              .product-cate__icon {
+                background-image: url("https://cdn-icons-png.flaticon.com/128/547/547562.png");
+              }
+            }
+
+            &:nth-child(5) {
+              .product-cate__icon {
+                background-image: url("https://cdn-icons-png.flaticon.com/128/2917/2917630.png");
+              }
+            }
+
+            &:last-child {
+              .product-cate__icon {
+                background-image: url("https://cdn-icons-png.flaticon.com/128/2987/2987992.png");
+              }
+            }
+
+            &:hover {
+              box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+              transition: 0.2s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-item-carousel {
+  .container {
+    .row:first-child {
+      padding-top: 68px;
+      padding-bottom: 16px;
+
+      .col1 {
+        p {
+          font-size: 24px;
+          font-family: "Victormono";
+          font-weight: bold;
+        }
+
+        span {
+          opacity: 0.9;
+          color: $Color-2;
+          letter-spacing: 1px;
+        }
+      }
+
+      .col2 {
+        nav > a {
+          position: relative;
+          cursor: pointer;
+          margin-left: 2px;
+
+          &::after {
+            content: "";
+            display: block;
+            height: 100%;
+            background: $Color-1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 6px;
+            color: white;
+          }
+
+          span {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+
+          &:first-child {
+            margin-left: 0;
+
+            &::after {
+              content: "BEST SELLING";
+              font-size: $fontSize-Extra_Light;
+              border-radius: 3px 0 0 3px;
+              overflow: hidden;
+            }
+          }
+
+          &:nth-child(2) {
+            &::after {
+              content: "LATEST";
+              font-size: $fontSize-Extra_Light;
+            }
+          }
+
+          &:last-child {
+            &::after {
+              content: "SALE";
+              font-size: $fontSize-Extra_Light;
+              border-radius: 0 3px 3px 0;
+            }
+          }
+        }
+
+        @media screen and (max-width: $breakpointSmall) {
+          nav {
+            width: 100%;
+
+            a {
+              width: calc((100% - 4px) / 3);
+            }
+          }
+        }
+      }
+    }
+
+    .carousel {
+      .carousel-card {
+        display: none;
+
+        .row {
+          padding-top: 16px;
+          padding-bottom: 0;
+
+          .custom-col {
+            .card {
+              width: 100% !important;
+              border-radius: 3px;
+              border: none;
+              transition: box-shadow 0.2s ease-in-out;
+
+              .card-text {
+                margin-bottom: 8px;
+                color: $Color-5;
+                font-size: $fontSize-Light;
+                text-transform: uppercase;
+              }
+
+              .card-title {
+                font-size: 18px;
+              }
+
+              p > a {
+                font-size: $fontSize-Light;
+                color: $Color-4;
+              }
+
+              .card-img-top {
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                height: 405.33px;
+                @media screen and (max-width: $breakpointSSmal) {
+                  height: 465px !important;
+                }
+              }
+
+              .card-price {
+                padding: 1rem;
+
+                ul {
+                  padding-left: 0;
+                  margin-bottom: 0;
+
+                  li {
+                    &:first-child {
+                      font-size: 18px;
+                      color: $Color-2;
+                      font-weight: bold;
+                    }
+
+                    &:last-child {
+                      div {
+                        background-color: $backGround-input;
+                        border: none;
+                        padding: 8px 12px;
+                        border-radius: 3px;
+                        cursor: pointer;
+
+                        svg {
+                          width: 18px;
+                          height: 18px;
+                        }
+                      }
+
+                      &:hover {
+                        svg {
+                          fill: white;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .img {
+                position: relative;
+
+                .btn-icon {
+                  position: absolute;
+                  background-color: $backGround-input;
+                  border: none;
+                  padding: 8px 12px;
+                  border-radius: 3px;
+                  opacity: 0;
+                  pointer-events: none;
+                  transition: opacity 0.2s ease-in-out;
+
+                  svg {
+                    width: 20px;
+                    height: 18px;
+                  }
+
+                  &:hover {
+                    svg {
+                      fill: white;
+                    }
+                  }
+                }
+
+                .quick-view {
+                  top: 50%;
+                  left: 35%;
+                  transform: translate(-35, -50);
+                  cursor: pointer;
+                }
+
+                .add-fav-book {
+                  top: 50%;
+                  left: 55%;
+                  transform: translate(-55, -50);
+                  cursor: pointer;
+                }
+
+                &:hover {
+                  .btn-icon {
+                    opacity: 1;
+                    pointer-events: initial;
+                    transition: opacity 0.2s ease-in-out;
+                  }
+                }
+              }
+
+              &:hover {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                transition: box-shadow 0.2s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+
+      .carousel-card.active {
+        display: block;
+      }
+    }
+  }
+}
+
+.author-month {
+  background-color: #f6f5f3;
+
+  .container > .row {
+    .custom-col {
+      border-radius: 4px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+
+      .title {
+        span {
+          color: $Color-1;
+          font-size: $fontSize-Light;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          padding-bottom: 8px;
+        }
+
+        p {
+          font-size: 24px;
+          font-family: "Victormono";
+          font-weight: bold;
+        }
+      }
+
+      .about {
+        padding: 28px 0;
+        width: 800px;
+
+        @media screen and (max-width: $breakpointMedium) {
+          width: 100%;
+        }
+      }
+
+      .product {
+        @media screen and (max-width: $breakpointSmall) {
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+
+          .card:nth-child(2) {
+            margin-left: 0px !important;
+            margin-top: 16px;
+          }
+        }
+
+        .card {
+          border-radius: 6px;
+          width: 100%;
+
+          img {
+            height: 413.33px;
+
+            @media screen and (max-width: $breakpointSmall) {
+              height: 725.33px;
+            }
+
+            @media screen and (max-width: $breakpointSSmal) {
+              height: 465px;
+            }
+          }
+
+          .card-img-top {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            object-fit: fill;
+          }
+
+          .card-body {
+            .card-text {
+              margin-bottom: 8px;
+              color: #f75454;
+              font-size: 14px;
+              text-transform: uppercase;
+            }
+
+            .card-title {
+              font-size: 18px;
+            }
+
+            p {
+              a {
+                font-size: 14px;
+                color: #7c6e65;
+              }
+            }
+          }
+
+          .card-price {
+            padding: 1rem;
+
+            ul {
+              padding-left: 0;
+
+              li {
+                &:first-child {
+                  font-size: 18px;
+                  color: $Color-2;
+                  font-weight: bold;
+                }
+
+                &:last-child {
+                  div {
+                    background-color: $backGround-input;
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 3px;
+                    cursor: pointer;
+
+                    svg {
+                      width: 18px;
+                      height: 18px;
+                    }
+
+                    &:hover {
+                      svg {
+                        fill: white;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .img {
+            position: relative;
+
+            .btn-icon {
+              position: absolute;
+              background-color: $backGround-input;
+              border: none;
+              padding: 8px 12px;
+              border-radius: 3px;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity 0.2s ease-in-out;
+
+              svg {
+                width: 20px;
+                height: 18px;
+              }
+
+              &:hover {
+                svg {
+                  fill: white;
+                }
+              }
+            }
+
+            .quick-view {
+              top: 50%;
+              left: 35%;
+              transform: translate(-35, -50);
+              cursor: pointer;
+            }
+
+            .add-fav-book {
+              top: 50%;
+              left: 55%;
+              transform: translate(-55, -50);
+              cursor: pointer;
+            }
+
+            &:hover {
+              .btn-icon {
+                opacity: 1;
+                pointer-events: initial;
+                transition: opacity 0.2s ease-in-out;
+              }
+            }
+          }
+        }
+
+        .card:nth-child(2) {
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+}
+
+.selected-book {
+  margin-top: 68px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-image: url("../../assets/images/beatriz-perez-moya-XN4T2PVUUgk-unsplash\ 1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+
+  .container {
+    .row:first-child {
+      padding-bottom: 16px;
+
+      .col {
+        ul {
+          padding-left: 0;
+          margin-bottom: 0;
+
+          li {
+            p {
+              font-size: 24px;
+              font-family: "Victormono";
+              font-weight: bold;
+            }
+
+            span {
+              font-size: $fontSize-Medium;
+              color: $Color-2;
+              opacity: 0.9;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    .row:last-child {
+      padding-top: 16px;
+
+      ul {
+        padding-left: 0;
+        margin-bottom: 12px;
+
+        li.author {
+          span {
+            padding: 4px 0;
+
+            &:first-child {
+              color: $Color-2;
+              opacity: 0.8;
+            }
+
+            &:last-child {
+              color: $Color-2;
+              opacity: 1;
+            }
+          }
+        }
+
+        li.categories {
+          span {
+            padding: 4px 0;
+
+            &:first-child {
+              color: $Color-2;
+              opacity: 0.8;
+            }
+
+            &:last-child {
+              color: $Color-2;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      p {
+        font-size: $fontSize-XX_Large;
+        font-weight: bold;
+      }
+
+      span {
+        color: $Color-2;
+        line-height: 1.7;
+        margin: 12px 0;
+        letter-spacing: 1px;
+        font-size: $fontSize-Light;
+        width: 450px;
+      }
+
+      .quantity {
+        input {
+          width: 65px;
+          height: 35px;
+          text-align: center;
+        }
+      }
+
+      button {
+        outline: none;
+        border-radius: 2px;
+        border: 1px solid $Color-1;
+        background-color: white;
+        width: 156px;
+        height: 35px;
+        margin-left: 12px;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          background-color: $Color-1;
+          color: white;
+          transition: 0.2s ease-in-out;
+        }
+      }
+
+      img {
+        width: 346px;
+        height: 461.33px;
+      }
+
+      .info {
+        padding-left: 28px;
+      }
+
+      @media screen and (max-width: $breakpointMedium) {
+        p {
+          font-size: $fontSize-X_Large;
+        }
+
+        .info {
+          justify-items: center;
+          padding-left: 12px;
+        }
+
+        span {
+          letter-spacing: 0;
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: $breakpointSmall) {
+        p {
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}
+
+.special {
+  background-color: $backGround-input;
+
+  .container {
+    .row {
+      padding: 48px 0;
+
+      .custom-col {
+        &:first-child {
+          p {
+            font-size: 24px;
+            font-family: "Victormono";
+            font-weight: bold;
+          }
+
+          span {
+            color: $Color-2;
+            opacity: 0.9;
+            letter-spacing: 1px;
+          }
+        }
+
+        &:last-child {
+          button {
+            outline: none;
+            border: none;
+            background-color: $Color-1;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 2px;
+            transition: 0.2s ease-in-out;
+
+            svg {
+              fill: white;
+            }
+
+            &:hover {
+              background-color: white;
+              border: 1px solid $Color-1;
+              color: $Color-1;
+              transition: 0.2s ease-in-out;
+
+              svg {
+                fill: $Color-1;
+              }
+            }
+          }
+        }
+
+        @media screen and (max-width: $breakpointSmall) {
+          &:last-child {
+            button {
+              width: 100%;
+              margin-top: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-blog {
+  .container {
+    .row:first-child {
+      padding-top: 68px;
+      padding-bottom: 16px;
+
+      .custom-col:first-child {
+        p {
+          font-size: 24px;
+          font-family: "Victormono";
+          font-weight: bold;
+        }
+
+        span {
+          opacity: 0.9;
+          letter-spacing: 1px;
+          color: $Color-2;
+        }
+      }
+
+      .custom-col:last-child {
+        span > a {
+          text-decoration: underline;
+        }
+
+        @media screen and (max-width: $breakpointSmall) {
+          justify-content: start !important;
+        }
+      }
+    }
+
+    .row:last-child {
+      padding-bottom: 68px;
+      padding-top: 16px;
+
+      .custom-col {
+        cursor: pointer;
+        padding-bottom: 24px;
+
+        img {
+          width: 166.5px;
+          height: 124.5px;
+          object-fit: cover;
+          border-radius: 2px;
+          position: relative;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        ul {
+          margin-bottom: 0;
+          padding-left: 14px;
+
+          li {
+            &:first-child {
+              padding-bottom: 8px;
+
+              span {
+                color: $Color-2;
+                font-size: $fontSize-Light;
+                opacity: 0.9;
+              }
+            }
+
+            &:last-child {
+              span {
+                font-family: "Victormono";
+                font-size: 14px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+
+        .Image {
+          position: relative;
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(246, 245, 243, 0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s ease-in-out;
+
+            svg {
+              fill: $Color-1;
+              stroke: $Color-1;
+              width: 24px;
+              height: 24px;
+              transform: translateY(-12px);
+              transition: 0.3s ease-in-out;
+            }
+          }
+
+          &:hover {
+            .overlay {
+              opacity: 1;
+              visibility: visible;
+              transition: 0.3s ease-in-out;
+
+              svg {
+                transform: translateY(0);
+                transition: 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          padding-bottom: 0;
+        }
+
+        &:nth-child(3) {
+          @media screen and (max-width: $breakpointLarge) {
+            padding-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-content {
+  border-radius: 3px !important;
+}
+
+.bread-crumb {
+  background-color: rgb(246, 245, 243, 0.6);
+
+  .custom-breadcrumb > .breadcrumb {
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  .custom-breadcrumb-item {
+    a {
+      font-size: $fontSize-Light;
+    }
+  }
+
+  .custom-breadcrumb-item.active {
+    text-decoration: underline;
+  }
+}
+
+.detail-product {
+  margin: 48px 0;
+
+  .container {
+    .row {
+      .custom-col:nth-child(1) {
+        div {
+          img {
+            width: 100%;
+            height: 628px;
+            border-radius: 3px;
+          }
+        }
+      }
+
+      .custom-col:nth-child(2) {
+        padding-left: 18px;
+
+        form {
+          input {
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            outline: none;
+            border: none;
+            background-color: #f6f5f3;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          button {
+            outline: none;
+            border: none;
+            color: white;
+            background-color: #19110b;
+            width: 42px;
+            height: 42px;
+            border: 1px solid #19110b;
+
+            &:first-child {
+              border-radius: 2px 0 0 2px;
+            }
+
+            &:last-child {
+              border-radius: 0 2px 2px 0;
+            }
+          }
+        }
+
+        .preview-item__detail {
+          padding-left: 0;
+          width: 100%;
+
+          li {
+            margin-bottom: 6px;
+
+            span {
+              &:first-child {
+                color: #161619;
+                opacity: 0.8;
+              }
+            }
+
+            &:first-child {
+              padding: 18px 0;
+              border-top: 1px solid #dee2e6;
+              border-bottom: 1px solid #dee2e6;
+
+              span {
+                font-size: 32px;
+                font-weight: bold;
+              }
+            }
+
+            &:nth-child(2) {
+              padding-top: 18px;
+
+              span {
+                &:first-child {
+                  color: #161619;
+                  opacity: 0.8;
+                }
+              }
+            }
+
+            &:last-child {
+              padding-bottom: 18px;
+              margin-bottom: 0;
+
+              span {
+                &:first-child {
+                  color: #161619;
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+        }
+
+        .sharing {
+          padding-left: 0;
+          padding-top: 18px;
+          padding-bottom: 18px;
+
+          li {
+            margin-right: 8px;
+
+            &:first-child {
+              color: #161619;
+              opacity: 0.8;
+
+              span {
+                font-size: 14px;
+              }
+            }
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+              width: 42px;
+              height: 42px;
+              border-radius: 2px;
+              background: #f6f5f3;
+              cursor: pointer;
+              transition: 0.3s ease-in-out;
+
+              svg {
+                fill: #19110b;
+                opacity: 0.6;
+              }
+
+              &:hover {
+                background-color: #dee2e6;
+                transition: 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+
+        .icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 2px;
+          background: #f6f5f3;
+          cursor: pointer;
+
+          svg {
+            fill: #19110b;
+          }
+        }
+
+        a {
+          margin: 16px 0;
+        }
+
+        p {
+          font-size: $fontSize-XX_Large;
+          font-weight: bold;
+          padding-bottom: 18px;
+          font-family: "Victormono";
+        }
+
+        section {
+          padding-bottom: 16px;
+          border-bottom: 1px solid #dee2e6;
+          width: 100%;
+
+          form {
+            padding-right: 14px;
+          }
+
+          .add-to-cart {
+            margin-right: 14px;
+            width: 134px;
+            text-transform: uppercase;
+
+            &:hover {
+              span {
+                color: white;
+              }
+            }
+          }
+
+          .add-to-fav {
+            &:hover {
+              svg {
+                fill: white;
+              }
+            }
+          }
+        }
+
+        .send-email {
+          span {
+            font-size: 14px;
+            color: #19110b;
+            opacity: 0.8;
+            cursor: pointer;
+
+            svg {
+              fill: #19110b;
+              opacity: 0.8;
+            }
+
+            &:hover {
+              opacity: 1;
+
+              svg {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.more-info {
+  .container {
+    .tabs {
+      display: none;
+    }
+
+    .tabs.descriptions-tab {
+      p {
+        padding: 24px 0;
+      }
+    }
+
+    .tabs.active {
+      display: block;
+    }
+  }
+}
+
+.related-product {
+  .container {
+    .row:first-child {
+      padding-top: 48px;
+      padding-bottom: 16px;
+
+      p {
+        font-size: 24px;
+        font-family: "Victormono";
+        font-weight: bold;
+      }
+    }
+
+    .row:last-child {
+      padding-bottom: 48px;
+
+      .custom-card {
+        .card {
+          border-radius: 6px;
+
+          img {
+            height: 413.33px;
+          }
+
+          .card-img-top {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+          }
+
+          .card-body {
+            .card-text {
+              margin-bottom: 8px;
+              color: #f75454;
+              font-size: 14px;
+              text-transform: uppercase;
+            }
+
+            .card-title {
+              font-size: 18px;
+            }
+
+            p {
+              a {
+                font-size: 14px;
+                color: #7c6e65;
+              }
+            }
+          }
+
+          .card-price {
+            padding: 1rem;
+
+            ul {
+              padding-left: 0;
+
+              li {
+                &:first-child {
+                  font-size: 18px;
+                  color: $Color-2;
+                  font-weight: bold;
+                }
+
+                &:last-child {
+                  div {
+                    background-color: $backGround-input;
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 3px;
+                    cursor: pointer;
+
+                    svg {
+                      width: 18px;
+                      height: 18px;
+                    }
+
+                    &:hover {
+                      svg {
+                        fill: white;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .img {
+            position: relative;
+
+            .btn-icon {
+              position: absolute;
+              background-color: $backGround-input;
+              border: none;
+              padding: 8px 12px;
+              border-radius: 3px;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity 0.2s ease-in-out;
+
+              svg {
+                width: 20px;
+                height: 18px;
+              }
+
+              &:hover {
+                svg {
+                  fill: white;
+                }
+              }
+            }
+
+            .quick-view {
+              top: 50%;
+              left: 35%;
+              transform: translate(-35, -50);
+              cursor: pointer;
+            }
+
+            .add-fav-book {
+              top: 50%;
+              left: 55%;
+              transform: translate(-55, -50);
+              cursor: pointer;
+            }
+
+            &:hover {
+              .btn-icon {
+                opacity: 1;
+                pointer-events: initial;
+                transition: opacity 0.2s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

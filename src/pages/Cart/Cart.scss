@@ -1,0 +1,233 @@
+@import "../../assets/styles/common";
+
+.cart {
+  background-color: #f6f5f3;
+  .container > .row {
+    padding-top: 0;
+    padding-bottom: 48px;
+    &:first-child {
+      padding-top: 48px;
+      padding-bottom: 12px;
+    }
+  }
+  .container > .row > .custom-col {
+    .cart-detail {
+      background-color: white;
+      border-radius: 4px;
+
+      p {
+        padding: 18px;
+        color: $Color-1;
+        font-size: $fontSize-Large;
+        font-family: Victormono;
+      }
+
+      div {
+        padding: 18px;
+        .image {
+          width: 20%;
+        }
+        .name {
+          width: 40%;
+        }
+        .input-quality {
+          width: 20%;
+        }
+        .price {
+          width: 10%;
+        }
+        .delete {
+          width: 10%;
+        }
+
+        .image > img {
+          width: 124px;
+          height: 165.33px;
+          border-radius: 2px;
+        }
+
+        .name > ul {
+          margin-bottom: 0;
+          padding-left: 0;
+        }
+        .name > ul > li {
+          &:first-child {
+            color: $Color-1;
+            font-size: $fontSize-Medium;
+            font-weight: bold;
+          }
+          color: $Color-4;
+          font-size: $fontSize-Light;
+          span {
+            font-size: $fontSize-Light;
+          }
+        }
+
+        .input-quality {
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
+          }
+          button,
+          input {
+            outline: none;
+            border: none;
+            height: 32px;
+            width: 38px;
+            text-align: center;
+            background-color: $backGround-input;
+          }
+          button {
+            width: 32px;
+            height: 32px;
+            background-color: $Color-1;
+            color: white;
+            &:first-child {
+              border-radius: 2px 0 0 2px;
+            }
+            &:last-child {
+              border-radius: 0 2px 2px 0;
+            }
+          }
+        }
+
+        .price > p {
+          font-size: $fontSize-Light;
+        }
+
+        .delete > button {
+          outline: none;
+          border: none;
+          padding: 8px 14px;
+          background-color: $backGround-input;
+          border-radius: 2px;
+          transition: background-color 0.2s ease;
+
+          svg {
+            stroke: $Color-1;
+            fill: $Color-1;
+            transition: background-color 0.2s ease;
+          }
+          &:hover {
+            background-color: $Color-1;
+            transition: background-color 0.2s ease;
+            svg {
+              stroke: white;
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+
+    .cart-checkout {
+      background-color: white;
+      border-radius: 4px;
+
+      p {
+        padding: 18px;
+        color: $Color-1;
+        font-size: $fontSize-Large;
+        font-family: Victormono;
+      }
+
+      ul.top {
+        padding: 18px;
+        li > span {
+          font-size: $fontSize-Light;
+        }
+      }
+
+      ul.bottom {
+        padding: 18px;
+        font-weight: bold;
+      }
+
+      .btn-checkout {
+        padding: 0 18px 18px 18px;
+        button {
+          width: 100%;
+          outline: none;
+          border: none;
+          border-radius: 2px;
+          background-color: $Color-1;
+          color: white;
+          padding: 8px 0;
+        }
+        p {
+          font-size: $fontSize-Light;
+          text-align: center;
+          padding: 0;
+        }
+        a {
+          font-size: $fontSize-Medium;
+          text-align: center;
+          svg {
+            padding-right: 4px;
+          }
+        }
+      }
+    }
+
+    .checkout-modal {
+      background-color: white;
+      border-radius: 4px;
+
+      p {
+        padding: 18px;
+        color: $Color-1;
+        font-size: $fontSize-Large;
+        font-family: Victormono;
+      }
+
+      .form-checkout {
+        padding: 18px;
+      }
+
+      .form-checkout > form > .btn-submit-bill {
+        outline: none;
+        border: none;
+        border-radius: 2px;
+        background-color: $Color-1;
+      }
+
+      .form-checkout > form > .row > .form-group {
+        p {
+          font-size: $fontSize-Medium;
+          font-family: monospace;
+          cursor: pointer;
+
+          &:nth-child(1) {
+            color: $Color-1;
+            border: 1px solid $border;
+            border-radius: 2px;
+          }
+          &:nth-child(2) {
+            background-color: $backGround-input;
+            border-left: 1px solid $border;
+            border-right: 1px solid $border;
+            display: none;
+          }
+        }
+        p.checked-payment {
+          text-decoration: underline;
+        }
+
+        .payment-2 > p:nth-child(1) {
+          border-radius: 0;
+          border-top: 0;
+          border-bottom: 0;
+        }
+        .payment-1 > p:nth-child(1) {
+          border-bottom: 0;
+        }
+        .payment-3 > p:nth-child(1) {
+          border-top: 0;
+        }
+      }
+    }
+  }
+}

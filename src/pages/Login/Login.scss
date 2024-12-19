@@ -1,0 +1,34 @@
+@import "../../assets/styles/common";
+
+.login {
+  .container > .row {
+    .login-modal {
+      padding: 24px 0;
+
+      form > .mb-3 > input {
+        border-radius: 2px;
+      }
+
+      form > .mb-3 {
+        .input-password {
+          position: relative;
+        }
+        .icon-eye {
+          position: absolute;
+          top: 50%;
+          right: 2%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+        }
+      }
+
+      form > .mb-3 > button {
+        outline: none;
+        border: none;
+        width: 100%;
+        background-color: $Color-1;
+        border-radius: 2px;
+      }
+    }
+  }
+}

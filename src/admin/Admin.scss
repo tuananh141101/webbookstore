@@ -1,0 +1,80 @@
+@import "../assets/styles/common";
+
+.header-dashboard {
+  background-color: $backGround-input;
+  .container {
+    .navbar-brand {
+      color: $Color-1;
+      font-size: $fontSize-Large;
+      font-family: monospace;
+    }
+  }
+}
+
+.table-admin {
+  padding: 24px 0;
+  .container > .nav > .nav-item > button {
+    border-radius: 2px;
+    color: $Color-1;
+  }
+
+  .container > .tab-content {
+    .header-products-modal {
+      h4 {
+        color: $Color-1;
+        font-weight: bold;
+        font-size: $fontSize-Large;
+      }
+
+      button {
+        border-radius: 2px;
+        background-color: $Color-1;
+        color: white;
+        padding: 8px 18px;
+      }
+    }
+    .table {
+      thead > tr > th {
+        text-align: center;
+        font-size: $fontSize-Light;
+      }
+      tbody > tr > td {
+        text-align: center;
+        font-size: $fontSize-Light;
+        button {
+          border-radius: 2px;
+          outline: none;
+          border: none;
+          font-size: $fontSize-Light;
+          &:nth-child(1) {
+            background-color: $Color-2;
+            margin-bottom: 4px;
+          }
+          &:nth-child(2) {
+            background-color: $Color-5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-content {
+    .modal-footer {
+      button {
+        border-radius: 2px;
+        outline: none;
+        border: none;
+        font-size: $fontSize-Light;
+        &:nth-child(1) {
+          background-color: $Color-1;
+          color: white;
+        }
+        &:nth-child(2) {
+          background-color: $Color-5;
+        }
+      }
+    }
+  }
+}
